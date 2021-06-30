@@ -31,12 +31,15 @@ function draw() {
       wall.shapeColor=color(0,255,0);
     }
   }
+
+  drawSprites();
   
 }
 
 function hasCollided(lbullet,lwall)
 {
   bulletRightEdge=lbullet.x+lbullet.width;
+  wallLeftEdge=lwall.x;
   if(bulletRightEdge>=wallLeftEdge)
   {
     return true;
